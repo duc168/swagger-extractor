@@ -1,0 +1,1153 @@
+[
+    {
+      "method": "POST",
+      "path": "​/auth​/register",
+      "params": [],
+      "body": {
+        "data": {
+          "email": "string",
+          "phoneNumber": "string",
+          "username": "string",
+          "password": "string",
+          "userType": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/auth​/resend-verify-mail",
+      "params": [],
+      "body": {
+        "data": {
+          "email": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/auth​/verify-code-register",
+      "params": [],
+      "body": {
+        "data": {
+          "email": "string",
+          "code": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/auth​/login",
+      "params": [],
+      "body": {
+        "data": {
+          "email": "string",
+          "password": "string",
+          "code": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/auth​/forgot-password",
+      "params": [],
+      "body": {
+        "data": {
+          "email": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/auth​/create-new-password",
+      "params": [],
+      "body": {
+        "data": {
+          "email": "string",
+          "password": "string",
+          "code": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "​/level​/list​/{userType}",
+      "params": [
+        {
+          "name": "userType",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "​/level​/create",
+      "params": [],
+      "body": {
+        "data": {
+          "name": "string",
+          "costLessOrEqual": 0,
+          "amount": 0,
+          "price": 0,
+          "userType": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "​/level​/update​/{levelID}",
+      "params": [
+        {
+          "name": "levelID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "name": "string",
+          "amount": 0,
+          "costLessOrEqual": 0,
+          "price": 0
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "​/level​/delete​/{levelID}",
+      "params": [
+        {
+          "name": "levelID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "PUT",
+      "path": "​/user​/update",
+      "params": [],
+      "body": {
+        "data": {
+          "phoneNumber": "string",
+          "username": "string",
+          "bankName": "string",
+          "bankAccount": 0,
+          "bankHolder": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/user​/turn-on-2fa",
+      "params": [],
+      "body": {
+        "data": {
+          "password": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/user​/verify-2fa",
+      "params": [],
+      "body": {
+        "data": {
+          "code": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/user​/turn-off-2fa",
+      "params": [],
+      "body": {
+        "data": {
+          "password": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "​/user​/get-qr",
+      "params": [],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/user​/me",
+      "params": [],
+      "body": {}
+    },
+    {
+      "method": "PUT",
+      "path": "​/user​/change-password",
+      "params": [],
+      "body": {
+        "data": {
+          "oldPassword": "string",
+          "newPassword": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "​/user​/get-bill",
+      "params": [],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/user​/check-bank",
+      "params": [],
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "​/user​/buy-level",
+      "params": [],
+      "body": {
+        "data": {
+          "levelID": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/setting​/create",
+      "params": [],
+      "body": {
+        "data": {
+          "name": "string",
+          "value": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "​/setting​/update",
+      "params": [],
+      "body": {
+        "data": {
+          "settings": [
+            {
+              "id": "string",
+              "value": "string"
+            }
+          ]
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "​/setting​/list",
+      "params": [],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/setting​/list-setting",
+      "params": [],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/parent-category​/list",
+      "params": [],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/category​/list-category​/{parentCatID}",
+      "params": [
+        {
+          "name": "parentCatID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "​/category​/create",
+      "params": [],
+      "body": {
+        "data": {
+          "parentCatID": "string",
+          "name": "string",
+          "minPrice": 0,
+          "description": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "​/category​/update​/{catID}",
+      "params": [
+        {
+          "name": "catID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "name": "string",
+          "minPrice": 0,
+          "description": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "​/category​/delete​/{catID}",
+      "params": [
+        {
+          "name": "catID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/seller​/store",
+      "params": [],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/seller​/store​/report​/{storeID}",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "​/seller​/store​/create",
+      "params": [],
+      "body": {
+        "data": {
+          "storeName": "string",
+          "hotline": "string",
+          "address": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "​/seller​/store​/update​/{storeID}",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "storeName": "string",
+          "hotline": "string",
+          "address": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "​/seller​/store​/{storeID}​/list-order",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/seller​/store​/{storeID}​/order​/{orderID}",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "orderID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "PUT",
+      "path": "​/seller​/store​/{storeID}​/order​/{orderID}​/update",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "orderID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "redealPrice": 0
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "​/seller​/store​/{storeID}​/list-category",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "​/seller​/store​/{storeID}​/category​/create",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "catID": "string",
+          "name": "string",
+          "description": "string",
+          "price": 0
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "​/seller​/store​/{storeID}​/category​/{storeCategoryID}​/update",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "storeCategoryID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "description": "string",
+          "status": 0,
+          "name": "string",
+          "price": 0
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "​/seller​/store​/{storeID}​/category​/{storeCategoryID}​/product​/via",
+      "params": [
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "storeCategoryID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "​/seller​/store​/{storeID}​/category​/{storeCategoryID}​/product​/via​/create",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "storeCategoryID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "accounts": [
+            {
+              "uid": "string",
+              "password": "string",
+              "twofa": "string",
+              "email": "string",
+              "pass_mail": "string",
+              "birthday": "string"
+            }
+          ]
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/seller​/store​/{storeID}​/category​/{storeCategoryID}​/product​/via​/upload-backup-file",
+      "params": [],
+      "body": {}
+    },
+    {
+      "method": "PUT",
+      "path": "​/seller​/store​/{storeID}​/category​/{storeCategoryID}​/product​/via​/{viaID}​/update",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "storeCategoryID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "viaID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "uid": "string",
+          "password": "string",
+          "twofa": "string",
+          "email": "string",
+          "pass_mail": "string",
+          "birthday": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "​/seller​/store​/{storeID}​/category​/{storeCategoryID}​/product​/via​/{viaID}​/delete",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "storeCategoryID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "viaID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/seller​/store​/{storeID}​/category​/{storeCategoryID}​/product​/bm",
+      "params": [
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "storeCategoryID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "​/seller​/store​/{storeID}​/category​/{storeCategoryID}​/product​/bm​/create",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "storeCategoryID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "listBm": [
+            "string"
+          ]
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "​/seller​/store​/{storeID}​/category​/{storeCategoryID}​/product​/bm​/{bmID}​/update",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "storeCategoryID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "bmID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "linkBM": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "​/seller​/store​/{storeID}​/category​/{storeCategoryID}​/product​/bm​/{bmID}​/delete",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "storeCategoryID",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "bmID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/seller​/buy-request​/list",
+      "params": [
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "parentCatID",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "catID",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "​/seller​/buy-request​/sell-product",
+      "params": [],
+      "body": {
+        "data": {
+          "buyRequestID": "string",
+          "amount": 0
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "​/buyer​/order​/create",
+      "params": [],
+      "body": {
+        "data": {
+          "storeCatID": "string",
+          "amount": 0
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "​/buyer​/order​/list",
+      "params": [
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "PUT",
+      "path": "​/buyer​/order​/complain​/{orderID}",
+      "params": [
+        {
+          "name": "orderID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "PUT",
+      "path": "​/buyer​/order​/finish​/{orderID}",
+      "params": [
+        {
+          "name": "orderID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/buyer​/category​/list",
+      "params": [
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "parentCatID",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "catID",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/buyer​/store​/{storeID}",
+      "params": [
+        {
+          "name": "storeID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "​/buyer​/buy-request​/create",
+      "params": [],
+      "body": {
+        "data": {
+          "catID": {},
+          "amount": 0,
+          "price": 0,
+          "description": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "​/buyer​/buy-request​/list",
+      "params": [
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "parentCatID",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "catID",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "PUT",
+      "path": "​/buyer​/buy-request​/stop​/{buyRequestID}",
+      "params": [
+        {
+          "name": "buyRequestID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/admin​/user​/list-user​/{userType}",
+      "params": [
+        {
+          "name": "userType",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "PUT",
+      "path": "​/admin​/user​/update-user​/{userID}",
+      "params": [
+        {
+          "name": "userID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "balance": 0,
+          "active": true,
+          "password": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "​/admin​/user​/upgrade-level​/{userID}",
+      "params": [
+        {
+          "name": "userID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "levelID": "string"
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "​/admin​/store​/list-store",
+      "params": [
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/admin​/order​/list-order",
+      "params": [
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/admin​/report",
+      "params": [
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "​/news​/create",
+      "params": [],
+      "body": {
+        "data": {
+          "title": "string",
+          "content": "string",
+          "status": 0
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "​/news​/update​/{newsID}",
+      "params": [
+        {
+          "name": "newsID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {
+        "data": {
+          "title": "string",
+          "content": "string",
+          "status": 0
+        },
+        "required": true
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "​/news​/delete​/{newsID}",
+      "params": [
+        {
+          "name": "newsID",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/news​/list",
+      "params": [
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {}
+    },
+    {
+      "method": "GET",
+      "path": "​/news​/admin-list"
+    }
+  ]
